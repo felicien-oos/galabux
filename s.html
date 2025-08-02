@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/offers.css" />
+  <link rel="icon" href="../imgs/Logo.png" type="image/png" />
+  <script src="../scripts/social.js" defer></script>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="../scripts/offers.js" defer></script>
+  <title>RobloBux | Offers</title>
+</head>
+
+<body>
+  <div class="loading"></div>
+  <div class="popup-container">
+    <div class="popup">
+      <div class="form-container">
+        <div class="input-group">
+          <input type="text" id="pseudo" class="form_input" placeholder=" " required>
+          <label class="form__label">Roblox username</label>
+        </div>
+
+        <div class="g-recaptcha" data-sitekey="6Lfr9o0rAAAAANR7IajwiecBP6PxKRcnkjICvN_I"></div>
+        <button class="popup-button" onclick="closePopup()">Done</button>
+
+        <p class="terms">
+          By signing in, you agree to our Terms of Service and Privacy Policy.
+          We are in no way affiliated or endorsed by Roblox� Corp. or any of their partners.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="content">
+    <nav class="navbar">
+      <h1 class="logo" onclick="window.location.href='https://roblobux.fr';">
+        <img src="../imgs/Logo.png" alt="RobloBux" style="width: 50px" />
+        <span class="brand-text">RobloBux</span>
+      </h1>
+      <div class="nav-links" id="navLinks">
+        <a href="./rank.html" class="user-info">
+          <img src="../imgs/ranking.png" alt="Profile Image" class="me-10 spaced-image"
+            style="height: 24px; width: 24px" />
+          <span class="spaced-text">Leaderboard</span>
+        </a>
+        <a href="./offers.html" class="user-info">
+          <img src="../imgs/offers.png" alt="Profile Image" class="me-10 spaced-image"
+            style="height: 24px; width: 24px" />
+          <span class="spaced-text">Offers</span>
+        </a>
+        <a href="./payement.html" class="user-info">
+          <img src="../imgs/whiterobux.png" alt="Profile Image" class="me-10 spaced-image"
+            style="height: 24px; width: 24px" />
+          <span class="spaced-text">Withdraw</span>
+        </a>
+        <a href="./account.html" class="user-info">
+          <img src="../imgs/profile2.png" alt="Profile Image" class="me-10 spaced-image"
+            style="height: 24px; width: 24px" />
+          <span class="spaced-text">Account</span>
+        </a>
+        <div class="user-info" id="profileContainer">
+          <img id="pp" alt="user Image" class="user-img" src="notset" />
+          <p class="robux" id="robux">?R$</p>
+          <p id="pseudoNav">Username</p>
+          <p id="clearLocalStorageButton">
+            <img src="../imgs/logout.png" alt="Clear Local Storage" width="24" height="24" />
+          </p>
+          <div class="green-line"></div>
+        </div>
+      </div>
+
+      <div class="burger-menu" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
+
+    <main class="main">
+      <div class="payment">
+        <div class="payment-list"></div>
+      </div>
+      <div class="container">
+        <div class="social-title">
+          <h3 id="HelpText">
+            Join our discord if you need help!
+          </h3>
+          <h1>Earn R$ by completing offers</h1>
+        </div>
+        <div class="social-button-wrapper">
+          <div class="social-button-row">
+            <div class="label">
+              <b>Follow for R$</b>
+            </div>
+            <button class="social-button discord" onclick="visitSocial('discord')">
+              <div fill="rgba(255, 255, 255, 0.87)">
+                <div>
+                  <div fill="rgba(255, 255, 255, 0.87)">
+                    <svg viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="socialLogo"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                      <path
+                        d="M9.20148 7.61473C9.20148 8.08476 8.84483 8.47002 8.39308 8.47002C7.94925 8.47002 7.58468 8.08476 7.58468 7.61473C7.58468 7.14471 7.94132 6.75944 8.39308 6.75944C8.84483 6.75944 9.20148 7.14471 9.20148 7.61473ZM5.50028 6.75944C5.04853 6.75944 4.69188 7.14471 4.69188 7.61473C4.69188 8.08476 5.05645 8.47002 5.50028 8.47002C5.95203 8.47002 6.30868 8.08476 6.30868 7.61473C6.3166 7.14471 5.95203 6.75944 5.50028 6.75944ZM13.8696 1.88197V15.7053C11.8729 13.9899 12.5115 14.5577 10.1922 12.4614L10.6122 13.8869H1.62472C0.729144 13.8869 0 13.178 0 12.2996V1.88197C0 1.00357 0.729144 0.294678 1.62472 0.294678H12.2449C13.1404 0.294678 13.8696 1.00357 13.8696 1.88197ZM11.6108 9.18662C11.6108 6.70551 10.4696 4.69442 10.4696 4.69442C9.32828 3.86224 8.24249 3.88536 8.24249 3.88536L8.13154 4.00864C9.47887 4.40932 10.105 4.98722 10.105 4.98722C8.22234 3.98405 6.01085 3.98387 4.18465 4.76376C3.89141 4.89475 3.71705 4.98722 3.71705 4.98722C3.71705 4.98722 4.37486 4.3785 5.80145 3.97782L5.72219 3.88536C5.72219 3.88536 4.6364 3.86224 3.49513 4.69442C3.49513 4.69442 2.35387 6.70551 2.35387 9.18662C2.35387 9.18662 3.01961 10.3039 4.77114 10.3578C4.77114 10.3578 5.06438 10.0111 5.30214 9.71829C4.29561 9.42548 3.91518 8.80906 3.91518 8.80906C4.03177 8.8884 4.22403 8.99125 4.24013 9.00169C5.57786 9.73003 7.47806 9.96865 9.18562 9.27138C9.46302 9.17121 9.77211 9.02481 10.0971 8.81676C10.0971 8.81676 9.70078 9.4486 8.66254 9.7337C8.90031 10.0265 9.18562 10.3578 9.18562 10.3578C10.9372 10.3039 11.6108 9.18662 11.6108 9.18662Z">
+                      </path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <button class="social-button instagram" onclick="visitSocial('instagram')">
+              <div fill="rgba(255, 255, 255, 0.87)">
+                <div>
+                  <div fill="rgba(255, 255, 255, 0.87)">
+                    <svg viewBox="0 0 448 512" fill="none" xmlns="http://www.w3.org/2000/svg" class="socialLogo"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                      <path
+                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                      </path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <button class="social-button twitter" onclick="visitSocial('twitter')">
+              <div fill="rgba(255, 255, 255, 0.87)">
+                <div>
+                  <div fill="rgba(255, 255, 255, 0.87)">
+                    <svg viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" class="socialLogo"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                      <path
+                        d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                      </path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </button>
+          </div>
+          <div class="social-button-row">
+            <button class="social-button bitlabs" onclick="switchProvider('bitlabs')">
+              <img alt="Monlix" src="../imgs/bitlabs.png" />
+            </button>
+            <button id="cpxButton" class="social-button cpxresearch" onclick="switchProvider('cpxresearch')">
+              <img alt="Monlix" src="../imgs/cpx.png" />
+            </button>
+            <button class="social-button monlix" onclick="switchProvider('monlix')">
+              <img alt="Monlix" src="../imgs/monlix.png" />
+            </button>
+            <button class="social-button notik" onclick="switchProvider('notik')">
+              <img alt="Notik" src="../imgs/notikme.png" />
+            </button>
+          </div>
+        </div>
+        <iframe class="if" id="display" src=""></iframe>
+        <script src="../scripts/monlixbase.js"></script>
+      </div>
+    </main>
+  </div>
+  <hr>
+  <footer class="footer">
+    <div class="section">
+      <img src="../imgs/Logo.png" alt="Logo">
+      <h2>RobloBux</h2>
+
+
+
+
+    </div>
+
+    <div class="section">
+
+      <h3>Follow us</h3>
+
+      <a href="https://discord.gg/DHru2hyvbm" class="footerlinks">Discord</a>
+
+      <a href="https://www.instagram.com/roblobuxx/" class="footerlinks">Instagram</a>
+
+      <a href="https://twitter.com/RobloBux" class="footerlinks">X</a>
+
+    </div>
+
+    <div class="section">
+
+      <h3>Information</h3>
+
+      <a href="/cdn-cgi/l/email-protection#7c1f1312081d1f083c0e131e10131e0904521a0e" class="footerlinks">Contact Us</a>
+
+      <a href="https://www.trustpilot.com/review/roblobux.fr" class="footerlinks">Trustpilot</a>
+
+    </div>
+
+    <div class="section">
+
+      <h3>Legal</h3>
+
+      <a href="https://roblobux.fr/en/tos.html" class="footerlinks">Terms Of Service</a>
+
+      <a href="https://roblobux.fr/en/pc.html" class="footerlinks">Privacy Policy</a>
+
+    </div>
+
+  </footer>
+  <p class="hero-terms">�2025 RobloBux. All Rights Reserved</p>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../scripts/websocket.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var profileContainer = document.getElementById("profileContainer");
+      var line = document.createElement("div");
+      line.classList.add("green-line");
+      profileContainer.appendChild(line);
+    });
+    const scrollableDiv = document.querySelector('.payment');
+    scrollableDiv.addEventListener('wheel', function (event) {
+      event.preventDefault();
+
+      if (event.deltaY > 0) {
+        scrollableDiv.scrollBy({
+          left: 100,
+          behavior: 'smooth'
+        });
+      } else {
+        scrollableDiv.scrollBy({
+          left: -100,
+          behavior: 'smooth'
+        });
+      }
+    });
+
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</body>
+
+</html>
